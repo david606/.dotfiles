@@ -1,4 +1,4 @@
-#files: 785	version: 5.8
+#files: 788	version: 5.8
 
 _comps=(
 '-' '_precommand'
@@ -212,6 +212,7 @@ _comps=(
 'curl' '_curl'
 'cut' '_cut'
 'cvs' '_cvs'
+'d' '_dirs'
 'darcs' '_darcs'
 'dash' '_sh'
 'date' '_date'
@@ -350,6 +351,7 @@ _comps=(
 'fmttest' '_mh'
 'fned' '_zed'
 'fnext' '_mh'
+'fnm' '_fnm'
 'fold' '_fold'
 'folder' '_mh'
 'folders' '_mh'
@@ -374,6 +376,7 @@ _comps=(
 'gbasename' '_basename'
 'gcat' '_cat'
 'gcc' '_gcc'
+'gccd' '_git'
 'gccgo' '_go'
 'gchgrp' '_chown'
 'gchmod' '_chmod'
@@ -390,7 +393,9 @@ _comps=(
 'gdd' '_dd'
 'gdf' '_df'
 'gdiff' '_diff'
+'gdnolock' '_git'
 'gdu' '_du'
+'gdv' '_git'
 'geany' '_geany'
 'gegrep' '_grep'
 'gem' '_gem'
@@ -413,7 +418,13 @@ _comps=(
 'gfmt' '_fmt'
 'gfold' '_fold'
 'ggetopt' '_getopt'
+'ggf' '_git'
+'ggfl' '_git'
+'ggl' '_git'
+'ggp' '_git'
+'ggpnp' '_git'
 'ggrep' '_grep'
+'ggu' '_git'
 'ggv' '_gnome-gv'
 'ghead' '_head'
 'ghostscript' '_ghostscript'
@@ -423,6 +434,7 @@ _comps=(
 'git' '_git'
 'git-cvsserver' '_git'
 'gitk' '_git'
+'_git_log_prettily' '_git'
 'git-receive-pack' '_git'
 'git-shell' '_git'
 'git-upload-archive' '_git'
@@ -850,6 +862,7 @@ _comps=(
 'ogginfo' '_vorbis'
 'oksh' '_sh'
 'okular' '_okular'
+'omz' '_omz'
 'openstack' '_openstack'
 'opera' '_webbrowser'
 'opera-next' '_webbrowser'
@@ -1513,8 +1526,18 @@ _comps=(
 
 _services=(
 'bzcat' 'bunzip2'
+'gccd' 'git-clone'
 'gchgrp' 'chgrp'
 'gchown' 'chown'
+'gdnolock' 'git-diff'
+'gdv' 'git-diff'
+'ggf' 'git-checkout'
+'ggfl' 'git-checkout'
+'ggl' 'git-checkout'
+'ggp' 'git-checkout'
+'ggpnp' 'git-checkout'
+'ggu' 'git-checkout'
+'_git_log_prettily' 'git-log'
 'gnupod_addsong.pl' 'gnupod_addsong'
 'gnupod_check.pl' 'gnupod_check'
 'gnupod_INIT.pl' 'gnupod_INIT'
@@ -1777,11 +1800,12 @@ autoload -Uz _alacritty _bluetoothctl _bootctl _busctl _bwrap \
             _wait _which _widgets _zargs _zattr \
             _zcalc _zcalc_line _zcompile _zed _zftp \
             _zle _zmodload _zmv _zparseopts _zpty \
-            _zsh-mime-handler _zsocket _zstyle _ztodo
+            _zsh-mime-handler _zsocket _zstyle _ztodo _fnm \
+            _fnm _fnm
 autoload -Uz +X _call_program
 
 typeset -gUa _comp_assocs
 _comp_assocs=( '' )
 
 #omz revision: d87ab251c7fe18626b2d0c4e4a184e7bed7c508b
-#omz fpath: /home/david/.oh-my-zsh/plugins/git /home/david/.oh-my-zsh/functions /home/david/.oh-my-zsh/completions /home/david/.oh-my-zsh/cache/completions /usr/local/share/zsh/site-functions /usr/share/zsh/site-functions /usr/share/zsh/functions/Calendar /usr/share/zsh/functions/Chpwd /usr/share/zsh/functions/Completion /usr/share/zsh/functions/Completion/Base /usr/share/zsh/functions/Completion/Linux /usr/share/zsh/functions/Completion/Unix /usr/share/zsh/functions/Completion/X /usr/share/zsh/functions/Completion/Zsh /usr/share/zsh/functions/Exceptions /usr/share/zsh/functions/Math /usr/share/zsh/functions/MIME /usr/share/zsh/functions/Misc /usr/share/zsh/functions/Newuser /usr/share/zsh/functions/Prompts /usr/share/zsh/functions/TCP /usr/share/zsh/functions/VCS_Info /usr/share/zsh/functions/VCS_Info/Backends /usr/share/zsh/functions/Zftp /usr/share/zsh/functions/Zle
+#omz fpath: /home/david/.oh-my-zsh/plugins/git /home/david/.oh-my-zsh/functions /home/david/.oh-my-zsh/completions /home/david/.oh-my-zsh/cache/completions /home/david/.oh-my-zsh/plugins/git /home/david/.oh-my-zsh/functions /home/david/.oh-my-zsh/completions /home/david/.oh-my-zsh/cache/completions /home/david/.oh-my-zsh/plugins/git /home/david/.oh-my-zsh/functions /home/david/.oh-my-zsh/completions /home/david/.oh-my-zsh/cache/completions /home/david/.oh-my-zsh/plugins/git /home/david/.oh-my-zsh/functions /home/david/.oh-my-zsh/completions /home/david/.oh-my-zsh/cache/completions /usr/local/share/zsh/site-functions /usr/share/zsh/site-functions /usr/share/zsh/functions/Calendar /usr/share/zsh/functions/Chpwd /usr/share/zsh/functions/Completion /usr/share/zsh/functions/Completion/Base /usr/share/zsh/functions/Completion/Linux /usr/share/zsh/functions/Completion/Unix /usr/share/zsh/functions/Completion/X /usr/share/zsh/functions/Completion/Zsh /usr/share/zsh/functions/Exceptions /usr/share/zsh/functions/Math /usr/share/zsh/functions/MIME /usr/share/zsh/functions/Misc /usr/share/zsh/functions/Newuser /usr/share/zsh/functions/Prompts /usr/share/zsh/functions/TCP /usr/share/zsh/functions/VCS_Info /usr/share/zsh/functions/VCS_Info/Backends /usr/share/zsh/functions/Zftp /usr/share/zsh/functions/Zle /home/david/.config/zsh/completion/ /home/david/.config/zsh/completion/ /home/david/.config/zsh/completion/
