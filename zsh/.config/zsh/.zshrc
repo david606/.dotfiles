@@ -48,7 +48,7 @@ zsh_add_plugin "hlissner/zsh-autopair"
 
 # Key-bindings
 bindkey -s '^o' 'ranger^M'
-bindkey -s '^f' 'zi^M'
+# bindkey -s '^f' 'zi^M'
 bindkey -s '^s' 'ncdu^M'
 # bindkey -s '^n' 'nvim $(fzf)^M'
 # bindkey -s '^v' 'nvim\n'
@@ -85,15 +85,12 @@ xset r rate 210 40
 
 # Environment variables set everywhere
 export EDITOR="nvim"
-export TERMINAL="alacritty"
+#  export TERMINAL="alacritty"
+export TERMINAL="terminator"
 export BROWSER="brave"
 
-# For QT Themes
-export QT_QPA_PLATFORMTHEME=qt5ct
 
 # remap caps to escape
 # setxkbmap -option caps:escape
 # swap escape and caps
 # setxkbmap -option caps:swapescape
-
-
