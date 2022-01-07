@@ -193,8 +193,8 @@ exec --no-startup-id dunst &
 exec --no-startup-id copyq &
 exec --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id fcitx &
-exec --no-startup-id  feh --randomize --bg-fill $HOME/.config/wallpaper
-
+exec --no-startup-id feh --randomize --bg-fill $HOME/.config/wallpaper
+exec --no-startup-id syndaemon -i 0.5 -t -K -R -d 
 
 # Window Config
 for_window [class="^.*"] border pixel 2
