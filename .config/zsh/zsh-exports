@@ -13,19 +13,15 @@ eval `dircolors $HOME/.dir_colors`
 synclient TapButton1=1 # 一个手指轻触触摸板代表点击左键
 synclient TapButton2=3 # 两个手指轻触触摸板代表点击右键
 synclient TapButton3=2 # 三个手指轻触触摸板代表点击中键 
-synclient PalmDetect=1  # 开启掌压感应
+synclient PalmDetect=100  # 开启掌压感应
 synclient PalmMinWidth=1 # 设定手掌与触摸板的最小接触面,超过该值认为触摸板被手掌压到了(单位是手指宽度?)
-synclient PalmMinZ=160 # 设定手掌压在触摸板上的最小压力, 超过该值认为触摸板被手掌压到了
+synclient PalmMinZ=200 # 设定手掌压在触摸板上的最小压力, 超过该值认为触摸板被手掌压到了
 
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS="@im=fcitx"
 
-export JAVA_HOME=/usr/local/environments/Java/jdk1.8.0_202
-export MAVEN_HOME=/usr/local/environments/Maven/apache-maven-3.2.5
-export PATH=$PATH:$JAVA_HOME/bin:$MAVEN_HOME/bin
-
-export GOROOT=/usr/lib/go
-export GOPATH=$HOME/Workspace/projects/GoProject
-export GOBIN=$GOPATH/bin
-export PATH=$PATH:$GOROOT/bin:$GOBIN    
+# export GOROOT=/usr/lib/go
+# export GOPATH=$HOME/Workspace/projects/GoProject
+# export GOBIN=$GOPATH/bin
+# export PATH=$PATH:$GOROOT/bin:$GOBIN    
