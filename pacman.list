@@ -13,6 +13,7 @@ copyq
 dialog
 docker
 dosfstools
+dpkg
 efibootmgr
 fcitx-configtool
 fd
@@ -65,6 +66,7 @@ rofi
 stow
 sysstat
 terminator
+thefuck
 traceroute
 tree
 ttf-dejavu
