@@ -21,7 +21,13 @@ export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS="@im=fcitx"
 
-# export GOROOT=/usr/lib/go
-# export GOPATH=$HOME/Workspace/projects/GoProject
-# export GOBIN=$GOPATH/bin
-# export PATH=$PATH:$GOROOT/bin:$GOBIN    
+export GO111MODULE=on
+export GOROOT=/usr/local/env/go
+export GOPATH=$HOME/Workspace/projects/GoProjects
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin:$GOBIN
+
+export LUNARVIM_HOME=$HOME/.local/share/lunarvim
+export LVIM_HOM=$LUNARVIM_HOME/lvim
+export PACKER_HOME=$LUNARVIM_HOME/site/pack/packer/start
+
