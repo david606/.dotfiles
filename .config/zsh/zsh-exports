@@ -28,6 +28,6 @@ export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin:$GOBIN
 
 export LUNARVIM_HOME=$HOME/.local/share/lunarvim
-export LVIM_HOM=$LUNARVIM_HOME/lvim
-export PACKER_HOME=$LUNARVIM_HOME/site/pack/packer/start
+export LUNARVIM_CORE=$LUNARVIM_HOME/lvim
+export LUNARVIM_PACKER=$LUNARVIM_HOME/site/pack/packer/start
 
