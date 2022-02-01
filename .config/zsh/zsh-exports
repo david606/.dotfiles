@@ -23,7 +23,7 @@ export XMODIFIERS="@im=fcitx"
 
 export GO111MODULE=on
 export GOROOT=/usr/local/env/go
-export GOPATH=$HOME/Workspace/projects/GoProjects
+export GOPATH=$HOME/workspace/projects/GoProjects
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin:$GOBIN
 
